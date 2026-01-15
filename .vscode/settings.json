@@ -10,5 +10,48 @@
   "stylelint.enable": true,
   "css.validate": false,
   "eslint.useFlatConfig": true,
-  "eslint.validate": ["javascript", "typescript", "typescriptreact"]
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+  "chat.tools.terminal.autoApprove": {
+    // Git read-only commands
+    "git status": true,
+    "git log": true,
+    "git diff": true,
+    "git show": true,
+    "git ls-files": true,
+    "git ls-tree": true,
+    "git blame": true,
+    "git shortlog": true,
+    "git describe": true,
+    "git whatchanged": true,
+    "git branch -r": true,
+    "git remote -v": true,
+    "git tag": true,
+    "git fetch": true,
+    "git branch --show-current": true,
+    "/^git branch(\\s+-[a-zA-Z]+)?$/": true,
+
+    // Filesystem inspection commands
+    "ls": true,
+    "pwd": true,
+    "cd": true,
+    "echo": true,
+    "cat": true,
+    "head": true,
+    "tail": true,
+    "find": true,
+    "tree": true,
+    "grep": true,
+
+    // Node & env inspection
+    "node -v": true,
+    "npm -v": true,
+    "npx -v": true,
+    "yarn -v": true,
+    "pnpm -v": true,
+    "printenv": true,
+    "env": true,
+
+    // Project specific safe commands
+    "npm run start:all": true
+  }
 }
